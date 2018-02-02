@@ -1,27 +1,26 @@
-import React from "react";
-import { connect } from "react-redux";
-import { logout } from "./../ducks/auth";
-import { userIsAuthenticatedRedir } from "./../helpers/auth";
+import React from 'react'
+import { connect } from 'react-redux'
+import { logoutRequest } from 'actions/auth'
 
 let Protected = props => {
   return (
     <div>
-      I am a protected route. Welcome {props.user.name}
+      I am a protected route. Welcome {props.user.email}
       <button
         onClick={() => {
-          props.dispatch(logout());
+          props.dispatch(logoutRequest())
         }}
       >
         Logout
       </button>
     </div>
-  );
-};
+  )
+}
 
 Protected = connect(state => {
   return {
-    user: state.auth.user
-  };
-})(Protected);
+    user: state.auth.me
+  }
+})(Protected)
 
-export default userIsAuthenticatedRedir(Protected);
+export default Protected

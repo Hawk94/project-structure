@@ -1,27 +1,32 @@
-import {LOGIN_ERROR, LOGIN_SUCCESS} from 'actions';
+import { LOGIN_ERROR, LOGIN_SUCCESS } from 'actions/auth'
 
 const initialState = {
-  loginErrors: [],
+  errors: [],
+  isLoading: false,
+  isSignedIn: false,
   me: null
-};
+}
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN_ERROR:
       return {
         ...state,
-        loginErrors: action.errors
-      };
+        isLoading: action.isLoading,
+        isSignedIn: action.isSignedIn,
+        errors: action.errors
+      }
     case LOGIN_SUCCESS:
       return {
         ...state,
         me: action.me,
-        isSignedIn: true,
-        loginErrors: []
-      };
+        isLoading: action.isLoading,
+        isSignedIn: action.isSignedIn,
+        errors: []
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default authReducer;
+export default authReducer

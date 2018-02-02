@@ -1,14 +1,20 @@
-import React, { Component } from "react";
-import Modal from "./../components/Modal";
-import SiteListContainer from "./SiteList/SiteListContainer";
+import React, { Component } from 'react'
+import Modal from 'components/modal'
+
+const defaultProps = {
+  showModal: false
+}
 
 class Home extends Component {
-  state = {
-    showModal: false
-  };
+  constructor(props) {
+    super(props)
+    this.setState({
+      showModal: props.showModal
+    })
+  }
 
   render() {
-    const { showModal } = this.state;
+    const { showModal } = this.state
 
     return (
       <div className="home">
@@ -26,12 +32,11 @@ class Home extends Component {
             <div>Hello I am a modal</div>
           </Modal>
         )}
-
-        <h2>Example list</h2>
-        <SiteListContainer filters={[]} />
       </div>
-    );
+    )
   }
 }
 
-export default Home;
+Home.defaultProps = defaultProps
+
+export default Home

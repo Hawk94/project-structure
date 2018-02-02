@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = props => (
   <header className="c-header">
@@ -8,6 +8,6 @@ const Header = props => (
       <Link to="/protected">Protected</Link>
     </nav>
   </header>
-);
+)
 
-export default Header;
+export default Header

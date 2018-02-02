@@ -1,8 +1,6 @@
 export const setAuthToken = ({ access_token }) => {
   try {
-    if (
-      access_token !== undefined
-    ) {
+    if (access_token !== undefined) {
       localStorage.setItem('access_token', access_token)
     }
   } catch (err) {

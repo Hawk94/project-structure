@@ -1,9 +1,9 @@
 export const parseResponseErrors = response => {
-  let errors = [];
+  let errors = []
 
   response.data.errors.forEach(error => {
-    errors.push(error.message);
-  });
+    errors.push(error.message)
+  })
 
-  return errors;
-};
+  return errors
+}

@@ -1,9 +1,9 @@
-import {fork, all} from 'redux-saga/effects';
+import { fork, all } from 'redux-saga/effects'
 
-import loginFlow from './auth';
+import loginFlow from './auth'
 
 function* rootSaga() {
-  yield all([loginFlow].map(fork));
+  yield all([loginFlow].map(fork))
 }
 
-export default rootSaga;
+export default rootSaga

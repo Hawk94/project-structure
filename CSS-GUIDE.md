@@ -4,7 +4,7 @@ Then check out: https://www.evoluted.net/thinktank/web-development/inuit-css-v5-
 
 RSCSS is a simple idea to build a maintainable CSS
 
-# Let's make it simple
+# Keep it simple
 - Classes over everything else to avoid confusing css prioritisation.
 - Abbreviate words, but do not create a new language.
 
@@ -17,7 +17,7 @@ RSCSS is a simple idea to build a maintainable CSS
 
 > Avoid using type selectors - Type selectors should be reserved for defining the basics. The styling of an unclassed element should not be dependent on where it is placed in the page.
 
-## On layout
+## On layout styling
   - Layout will be determined by high level classes. These will determine how content sits on a page
   - There will be a small number of css based layouts that cover >90% of pages served by the application.
   - These styles will be imported as a starting point for any new feature.

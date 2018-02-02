@@ -10,14 +10,22 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.0",
+    "react-transition-group": "^2.2.1",
     "redux": "^3.7.2",
-    "redux-saga": "^0.16.0"
+    "redux-auth-wrapper": "^2.0.2",
+    "redux-form": "^7.2.3",
+    "redux-saga": "^0.16.0",
+    "type-to-reducer": "^1.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "coverage": "yarn test -- --coverage",
+    "lint": "./node_modules/.bin/eslint \"src/**/*.{js,jsx}\"",
+    "lint-fix": "./node_modules/.bin/eslint --fix \"src/**/*.{js,jsx}\"",
+    "eslint-check": "./node_modules/.bin/eslint --print-config .eslintrc.json | ./node_modules/.bin/eslint-config-prettier-check"
   },
   "devDependencies": {
     "eslint": "^4.16.0",

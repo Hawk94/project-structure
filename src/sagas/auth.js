@@ -9,7 +9,7 @@ export const requestLogin = data => {
   const config = {
     'Content-Type': 'application/json'
   }
-  const url = `${process.env.REACT_APP_COLAB_API_URL}/api/v1/authentication/admin/login/`
+  const url = `${process.env.REACT_APP_BASE_AUTH_URL}/api/v1/authentication/admin/login/`
 
   return axios.post(url, data, config)
 }
@@ -26,9 +26,9 @@ export const requestLogout = token => {
 
 function* loginFlow() {
   while (true) {
-    const { credentials } = yield take(LOGIN_REQUEST)
+    const { payload } = yield take(LOGIN_REQUEST)
 
-    const task = yield fork(authenticate, credentials)
+    const task = yield fork(authenticate, payload)
     const action = yield take([LOGOUT_REQUEST, LOGIN_ERROR])
     if (action.type === 'LOGOUT_REQUEST') yield cancel(task)
     yield call(signout)

@@ -6,7 +6,7 @@ import './Toast.css'
 const Toast = props => (
   <CSSTransition timeout={1000} classNames="fade" in={props.in} onExited={props.onExited}>
     <div className="o-toast" onClick={props.handleClick}>
-      {props.data.text}
+      {props.text}
     </div>
   </CSSTransition>
 )

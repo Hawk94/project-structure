@@ -1,21 +1,21 @@
-import { SHOW, DESTROY } from 'actions/toasts'
+import { TOAST_ADD, TOAST_HIDE } from 'actions/toasts'
 
-const initialState = {
-  toasts: []
-}
-
-const toastsReducer = (state = initialState, action) => {
+const toastsReducer = (state = [], action) => {
   switch (action.type) {
-    case SHOW:
-      return {
+    case TOAST_ADD:
+      return [
         ...state,
-        toasts: [...state.toasts, action.payload]
-      }
-    case DESTROY:
-      return {
-        ...state,
-        toasts: state.toasts.filter(toasts => toasts.id !== action.id)
-      }
+        action.payload
+      ]
+    case TOAST_HIDE:
+      return state.map((toast, index) => {
+        if (toast.id === action.payload) {
+          return Object.assign({}, toast, {
+            isVisible: !toast.isVisible
+          })
+        }
+        return toast
+      })
     default:
       return state
   }

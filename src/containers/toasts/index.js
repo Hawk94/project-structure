@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
 import { TransitionGroup } from 'react-transition-group'
-import { destroyToast } from 'actions/toasts'
+import { hideToast } from 'actions/toasts'
 import Toast from 'components/toast'
 
 import './Toasts.css'
@@ -10,14 +10,15 @@ import './Toasts.css'
 class ToastContainer extends Component {
   render() {
     const { toasts, dispatch } = this.props
+    const visibleToasts = toasts.filter(toast => toast.isVisible)
 
     return ReactDOM.createPortal(
       <TransitionGroup className="o-toasts">
-        {toasts.map((k, i) => (
+        {visibleToasts.map((k, i) => (
           <Toast
             key={i}
             handleClick={() => {
-              dispatch(destroyToast(k.id))
+              dispatch(hideToast(k.id))
             }}
             {...k}
           />
@@ -30,7 +31,7 @@ class ToastContainer extends Component {
 
 ToastContainer = connect(state => {
   return {
-    toasts: state.toasts.toasts
+    toasts: state.toasts
   }
 })(ToastContainer)
 

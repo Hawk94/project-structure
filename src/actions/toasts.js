@@ -1,24 +1,21 @@
 import { guid } from 'helpers/utils'
 
-export const SHOW = 'SHOW'
-export const DESTROY = 'DESTROY'
+export const TOAST_ADD = 'TOAST_ADD'
+export const TOAST_HIDE = 'TOAST_HIDE'
 
-export const createToast = toast => {
+export const createToast = ({ text }) => {
   const id = guid()
   return {
-    type: SHOW,
+    type: TOAST_ADD,
     payload: {
-      promise: new Promise(resolve => {
-        setTimeout(() => {
-          resolve(id)
-        }, toast.duration || 4500)
-      }),
-      data: { ...toast, id }
+      id,
+      text,
+      isVisible: true
     }
   }
 }
 
-export const destroyToast = id => ({
-  type: DESTROY,
-  id
+export const hideToast = payload => ({
+    type: TOAST_HIDE,
+    payload
 })

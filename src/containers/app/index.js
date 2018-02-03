@@ -26,7 +26,7 @@ class App extends Component {
             <Route path="/login" component={userIsNotAuthenticated(Login)} />
           </Switch>
         </main>
-        <button onClick={() => dispatch(createToast({ text: 'Lovely Toast' }))}>Do a toast</button>
+        <button onClick={() => dispatch(createToast({ text: 'Lovely Toast' }))}>Create a toast</button>
       </div>
     )
   }

@@ -12,16 +12,16 @@ const authReducer = (state = initialState, action) => {
     case LOGIN_ERROR:
       return {
         ...state,
-        isLoading: action.isLoading,
-        isSignedIn: action.isSignedIn,
-        errors: action.errors
+        isLoading: action.meta.isLoading,
+        isSignedIn: action.meta.isSignedIn,
+        errors: action.payload
       }
     case LOGIN_SUCCESS:
       return {
         ...state,
-        me: action.me,
-        isLoading: action.isLoading,
-        isSignedIn: action.isSignedIn,
+        me: action.payload,
+        isLoading: action.meta.isLoading,
+        isSignedIn: action.meta.isSignedIn,
         errors: []
       }
     default:

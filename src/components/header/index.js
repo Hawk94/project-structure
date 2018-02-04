@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Logo from './logo.svg'
+import MainMenu from './main-menu.svg'
+
+import './Header.css'
 
 const Header = props => (
-  <header className="c-header">
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/protected">Protected</Link>
+  <header className="Header">
+    <nav className="nav">
+      <Link to="/"><img className="Logo" src={Logo} height='26px' width='22px' alt="Logo" /></Link>
+      <Link to="/locations"><img className="Logo" src={MainMenu} height='26px' width='22px' alt="Menu" /></Link>
     </nav>
   </header>
 )

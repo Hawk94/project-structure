@@ -5,8 +5,6 @@ import { TransitionGroup } from 'react-transition-group'
 import { hideToast } from 'actions/toasts'
 import Toast from 'components/toast'
 
-import './Toasts.css'
-
 class ToastContainer extends Component {
   render() {
     const { toasts, dispatch } = this.props

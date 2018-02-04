@@ -1,4 +1,4 @@
-.o-modal {
+.Modal {
   position: fixed;
   top: 0px;
   bottom: 0px;
@@ -10,7 +10,7 @@
   justify-content: center;
 }
 
-.o-modal-body {
+.Modal > .content {
   width: 420px;
   background-color: #ffffff;
   padding: 1rem;

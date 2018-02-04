@@ -7,8 +7,8 @@ class Modal extends Component {
   render() {
     const { handleClose } = this.props
     return ReactDOM.createPortal(
-      <div className="o-modal">
-        <main className="o-modal-body">
+      <div className="Modal">
+        <main className="content">
           {this.props.children}
           <button onClick={handleClose}>Close</button>
         </main>

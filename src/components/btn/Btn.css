@@ -1,0 +1,18 @@
+.Btn {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  border-style: none;
+  text-decoration: none;
+  outline: none;
+  width: 322px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #8091a5;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.Btn:hover {
+  background-color: #2FE796;
+  }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Modal from 'components/modal'
+import Header from 'components/header'
 
 const defaultProps = {
   showModal: false
@@ -16,24 +17,25 @@ class Home extends Component {
   render() {
     const { showModal } = this.state
 
-    return (
-      <div className="home">
-        <h1>Home</h1>
-        <button
-          data-balloon="Whats up!"
-          data-balloon-pos="up"
-          onClick={() => this.setState({ showModal: true })}
-        >
-          Do a modal
-        </button>
+    return [
+        <Header />,
+        <div className="Main">
+          <h1>Home</h1>
+          <button
+            data-balloon="Whats up!"
+            data-balloon-pos="up"
+            onClick={() => this.setState({ showModal: true })}
+          >
+            Do a modal
+          </button>
 
-        {showModal && (
-          <Modal handleClose={() => this.setState({ showModal: false })}>
-            <div>Hello I am a modal</div>
-          </Modal>
-        )}
-      </div>
-    )
+          {showModal && (
+            <Modal handleClose={() => this.setState({ showModal: false })}>
+              <div>Hello I am a modal</div>
+            </Modal>
+          )}
+        </div>
+      ]
   }
 }
 

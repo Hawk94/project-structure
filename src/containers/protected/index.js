@@ -1,12 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { logoutRequest } from 'actions/auth'
+import Header from 'components/header'
 
 let Protected = props => {
-  return (
-    <div>
-      I am a protected route. Welcome {props.user.email}
+  return [
+    <Header />,
+    <div className="Main">
+      <p>I am a protected route. Welcome {props.user.email}</p>
       <button
+        className="Btn"
         onClick={() => {
           props.dispatch(logoutRequest())
         }}
@@ -14,7 +17,7 @@ let Protected = props => {
         Logout
       </button>
     </div>
-  )
+  ]
 }
 
 Protected = connect(state => {

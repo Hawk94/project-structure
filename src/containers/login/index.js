@@ -1,8 +1,12 @@
 import 'components/form'
+import 'components/btn'
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import renderField from 'components/field-renderer'
 import { loginRequest } from 'actions/auth'
+import logoWhite from './logoWhite.svg'
+
+import './Login.css'
 
 export const required = value => (value ? undefined : 'Required')
 
@@ -14,27 +18,28 @@ const LoginForm = ({ handleSubmit, invalid, submitting }) => {
   const submitButtonDisabled = invalid || submitting
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
-      <Field
-        placeholder="Email"
-        name="email"
-        type="email"
-        component={renderField}
-        className="input"
-        validate={[required]}
-      />
-      <Field
-        placeholder="Password"
-        name="password"
-        type="password"
-        component={renderField}
-        className="input"
-        validate={[required]}
-      />
-      <button className="submit" type="submit" disabled={submitButtonDisabled}>
-        Login
-      </button>
-    </form>
+    <div className="Login">
+      <img className="logoWhite" src={logoWhite} height='34px' width='39px' alt="Logo" />
+      <form className="Form" onSubmit={handleSubmit(submit)}>
+        <Field
+          placeholder="Email"
+          name="email"
+          type="email"
+          component={renderField}
+          validate={[required]}
+        />
+        <Field
+          placeholder="Password"
+          name="password"
+          type="password"
+          component={renderField}
+          validate={[required]}
+        />
+        <button className="Btn" type="submit" disabled={submitButtonDisabled}>
+          Login
+        </button>
+      </form>
+    </div>
   )
 }
 

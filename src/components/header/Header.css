@@ -1,0 +1,15 @@
+.Header {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  background-color: #FFFFFF;
+}
+
+.Header > .nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Logo {
+  margin: 20px 17px 20px 17px;
+}

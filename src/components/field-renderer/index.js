@@ -9,7 +9,7 @@ const renderField = ({
 }) => {
   return (
     <div className="inputContainer">
-      <input {...input} className="inputError" placeholder={placeholder} type={type} />
+      <input {...input} className="input" placeholder={placeholder} type={type} />
       {touched && error && <div className="errorContainer">{error}</div>}
     </div>
   )

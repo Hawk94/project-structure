@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
 import { TransitionGroup } from 'react-transition-group'
-import { hideToast } from 'actions/toasts'
+import { hideToast } from 'ducks/toasts'
 import Toast from 'components/toast'
 
 class ToastContainer extends Component {
@@ -11,7 +11,7 @@ class ToastContainer extends Component {
     const visibleToasts = toasts.filter(toast => toast.isVisible)
 
     return ReactDOM.createPortal(
-      <TransitionGroup className="o-toasts">
+      <TransitionGroup className="Toasts">
         {visibleToasts.map((k, i) => (
           <Toast
             key={i}

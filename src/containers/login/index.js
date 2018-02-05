@@ -1,10 +1,9 @@
-import 'components/form'
-import 'components/btn'
+import 'components/Form'
+import 'components/Btn'
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import renderField from 'components/field-renderer'
-import { loginRequest } from 'actions/auth'
-import logoWhite from './logoWhite.svg'
+import renderField from 'components/fieldRenderer'
+import { loginRequest } from 'ducks/auth'
 
 export const required = value => (value ? undefined : 'Required')
 
@@ -18,13 +17,13 @@ const LoginForm = ({ handleSubmit, invalid, submitting }) => {
   return (
     <div className="Section">
       <div className="Main">
-        <img className="logoWhite" src={logoWhite} height="34px" width="39px" alt="Logo" />
         <form className="Form" onSubmit={handleSubmit(submit)}>
           <Field
             placeholder="Email"
             name="email"
             type="email"
             component={renderField}
+            className="input"
             validate={[required]}
           />
           <Field
@@ -32,6 +31,7 @@ const LoginForm = ({ handleSubmit, invalid, submitting }) => {
             name="password"
             type="password"
             component={renderField}
+            className="input"
             validate={[required]}
           />
           <button className="Btn" type="submit" disabled={submitButtonDisabled}>

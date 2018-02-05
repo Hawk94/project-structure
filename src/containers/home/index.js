@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Modal from 'components/modal'
-import Header from 'components/header'
+import Modal from 'components/Modal'
+import Header from 'components/Header'
 
 const defaultProps = {
   showModal: false

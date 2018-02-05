@@ -1,7 +1,7 @@
-import 'components/main'
-import 'components/tiles'
+import 'components/Main'
+import 'components/Tiles'
 import React, { Component } from 'react'
-import Header from 'components/header'
+import Header from 'components/Header'
 
 class Locations extends Component {
   render() {

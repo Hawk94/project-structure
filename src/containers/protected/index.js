@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { logoutRequest } from 'actions/auth'
-import Header from 'components/header'
+import { logoutRequest } from 'ducks/auth'
+import Header from 'components/Header'
 
 let Protected = props => {
   return (

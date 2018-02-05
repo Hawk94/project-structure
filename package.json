@@ -15,7 +15,6 @@
     "redux-auth-wrapper": "^2.0.2",
     "redux-form": "^7.2.3",
     "redux-saga": "^0.16.0",
-    "type-to-reducer": "^1.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

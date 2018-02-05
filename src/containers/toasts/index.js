@@ -5,15 +5,13 @@ import { TransitionGroup } from 'react-transition-group'
 import { hideToast } from 'actions/toasts'
 import Toast from 'components/toast'
 
-import './Toasts.css'
-
 class ToastContainer extends Component {
   render() {
     const { toasts, dispatch } = this.props
     const visibleToasts = toasts.filter(toast => toast.isVisible)
 
     return ReactDOM.createPortal(
-      <TransitionGroup className="o-toasts">
+      <TransitionGroup className="Toasts">
         {visibleToasts.map((k, i) => (
           <Toast
             key={i}

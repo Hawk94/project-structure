@@ -1,17 +1,13 @@
-.c-header {
+.Header {
   background-color: #000000;
   color: #ffffff;
   padding: 10px 0;
 }
 
-.c-header nav a,
-.c-header nav a:visited,
-.c-header nav:active {
+.Header nav a,
+.Header nav a:visited,
+.Header nav:active {
   color: #ffffff;
   text-decoration: none;
   margin: 0 5px;
-}
-
-.c-main {
-  padding: 20px;
 }

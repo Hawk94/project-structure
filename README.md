@@ -1,6 +1,6 @@
 # Project Structure
 
-> A clear, opinionated guide to support the development of large scale single page applications
+> A clear, opinionated project skeleton for a SPA using redux & redux-sagas
 
 ## Install
 
@@ -54,4 +54,4 @@ $ yarn start
 
 ## Project Style Guides
 
-See more on the [project style guide](https://gist.github.com/Hawk94/fd5d968b46ca690d7e3e75e649ad163b)
+See more on the [project style guide](https://gist.github.com/Hawk94/4f5ac0359e1365dc31ce27bfc55b9afa)

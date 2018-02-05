@@ -16,6 +16,6 @@ export const createToast = ({ text }) => {
 }
 
 export const hideToast = payload => ({
-    type: TOAST_HIDE,
-    payload
+  type: TOAST_HIDE,
+  payload
 })

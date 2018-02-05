@@ -9,8 +9,6 @@ import Protected from 'containers/protected'
 import ToastContainer from 'containers/toasts'
 import Login from 'containers/login'
 
-import './App.css'
-
 class App extends Component {
   render() {
     const { dispatch } = this.props
@@ -19,14 +17,16 @@ class App extends Component {
       <div className="App">
         <Header />
         <ToastContainer />
-        <main className="c-main">
+        <main className="Main">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/protected" component={userIsAuthenticated(Protected)} />
             <Route path="/login" component={userIsNotAuthenticated(Login)} />
           </Switch>
         </main>
-        <button onClick={() => dispatch(createToast({ text: 'Lovely Toast' }))}>Create a toast</button>
+        <button onClick={() => dispatch(createToast({ text: 'Lovely Toast' }))}>
+          Create a toast
+        </button>
       </div>
     )
   }

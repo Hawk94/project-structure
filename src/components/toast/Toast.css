@@ -1,8 +1,4 @@
-.o-toasts {
-  position: relative;
-}
-
-.o-toast {
+.toast {
   background-color: #ffffff;
   padding: 1rem;
   margin: 1rem;
@@ -12,10 +8,10 @@
   transition: opacity 500ms ease;
 }
 
-.o-toast:hover {
+.toast:hover {
   background-color: #eee;
 }
 
-.o-toast.fade-exit {
+.toast.fade-exit {
   opacity: 0;
 }

@@ -2,7 +2,7 @@ import 'components/form'
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import renderField from 'components/field-renderer'
-import { loginRequest } from 'actions/auth'
+import { loginRequest } from 'ducks/auth'
 
 export const required = value => (value ? undefined : 'Required')
 

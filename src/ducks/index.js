@@ -1,7 +1,15 @@
 import { combineReducers } from 'redux'
 import { reducer as form } from 'redux-form'
-import auth from './auth'
-import toasts from './toasts'
+import { authReducer as auth, loginFlow } from './auth'
+import { toastsReducer as toasts, watchHideToast } from './toasts'
+import { fork, all } from 'redux-saga/effects'
+
+export function* rootSaga() {
+  yield all([
+    loginFlow,
+    watchHideToast
+  ].map(fork))
+}
 
 const appReducer = combineReducers({
   form,

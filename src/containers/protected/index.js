@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { logoutRequest } from 'actions/auth'
+import { logoutRequest } from 'ducks/auth'
 
 let Protected = props => {
   return (

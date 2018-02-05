@@ -31,11 +31,9 @@ class Home extends Component {
             Do a modal
           </button>
           <div style={{ 'padding-top': '10px' }}>
-            <button className="Btn">
-              <Link className="Btn" to="/protected">
-                Protected Route
-              </Link>
-            </button>
+            <Link to="/protected">
+              <button className="Btn">Protected Route</button>
+            </Link>
           </div>
 
           {showModal && (

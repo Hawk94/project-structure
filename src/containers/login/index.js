@@ -6,8 +6,6 @@ import renderField from 'components/field-renderer'
 import { loginRequest } from 'actions/auth'
 import logoWhite from './logoWhite.svg'
 
-import './Login.css'
-
 export const required = value => (value ? undefined : 'Required')
 
 const LoginForm = ({ handleSubmit, invalid, submitting }) => {

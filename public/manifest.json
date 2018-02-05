@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Colab",
+  "name": "Colab - Property management tool",
   "icons": [
     {
       "src": "favicon.ico",

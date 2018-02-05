@@ -21,7 +21,9 @@
 }
 
 .Form > .inputContainer > .errorContainer {
-  /* Placeholder CSS */
   padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 0.7;
   color: #FF4242;
 }

@@ -4,20 +4,22 @@ import { logoutRequest } from 'actions/auth'
 import Header from 'components/header'
 
 let Protected = props => {
-  return [
-    <Header />,
-    <div className="Main">
-      <p>I am a protected route. Welcome {props.user.email}</p>
-      <button
-        className="Btn"
-        onClick={() => {
-          props.dispatch(logoutRequest())
-        }}
-      >
-        Logout
-      </button>
+  return (
+    <div className="Section">
+      <Header />
+      <div className="Main">
+        <p style={{ color: '#FFFFFF' }}>I am a protected route. Welcome {props.user.email}</p>
+        <button
+          className="Btn"
+          onClick={() => {
+            props.dispatch(logoutRequest())
+          }}
+        >
+          Logout
+        </button>
+      </div>
     </div>
-  ]
+  )
 }
 
 Protected = connect(state => {

@@ -5,18 +5,20 @@ import Header from 'components/header'
 
 class Locations extends Component {
   render() {
-    return [
-      <Header />,
-      <div className="Main">
-        <header className="title">Co-Living</header>
-        <div className="Tiles">
-          <div className="Tile orange" />
-          <div className="Tile blue" />
-          <div className="Tile pink" />
-          <div className="Tile green" />
+    return (
+      <div className="Section">
+        <Header />
+        <div className="Main">
+          <header className="title">Co-Living</header>
+          <div className="Tiles">
+            <div className="Tile orange" />
+            <div className="Tile blue" />
+            <div className="Tile pink" />
+            <div className="Tile green" />
+          </div>
         </div>
       </div>
-    ]
+    )
   }
 }
 

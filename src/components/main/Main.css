@@ -1,8 +1,6 @@
 .Main {
-  grid-column-start: 2;
-  grid-column-end: -2;
-  grid-row-start: 3;
-  grid-row-end: -1;
+  grid-area: main;
+  text-align: center;
   margin: auto;
 }
 

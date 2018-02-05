@@ -18,27 +18,29 @@ const LoginForm = ({ handleSubmit, invalid, submitting }) => {
   const submitButtonDisabled = invalid || submitting
 
   return (
-    <div className="Login">
-      <img className="logoWhite" src={logoWhite} height='34px' width='39px' alt="Logo" />
-      <form className="Form" onSubmit={handleSubmit(submit)}>
-        <Field
-          placeholder="Email"
-          name="email"
-          type="email"
-          component={renderField}
-          validate={[required]}
-        />
-        <Field
-          placeholder="Password"
-          name="password"
-          type="password"
-          component={renderField}
-          validate={[required]}
-        />
-        <button className="Btn" type="submit" disabled={submitButtonDisabled}>
-          Login
-        </button>
-      </form>
+    <div className="Section">
+      <div className="Main">
+        <img className="logoWhite" src={logoWhite} height="34px" width="39px" alt="Logo" />
+        <form className="Form" onSubmit={handleSubmit(submit)}>
+          <Field
+            placeholder="Email"
+            name="email"
+            type="email"
+            component={renderField}
+            validate={[required]}
+          />
+          <Field
+            placeholder="Password"
+            name="password"
+            type="password"
+            component={renderField}
+            validate={[required]}
+          />
+          <button className="Btn" type="submit" disabled={submitButtonDisabled}>
+            Login
+          </button>
+        </form>
+      </div>
     </div>
   )
 }

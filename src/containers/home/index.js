@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Modal from 'components/modal'
 import Header from 'components/header'
 
@@ -17,17 +18,25 @@ class Home extends Component {
   render() {
     const { showModal } = this.state
 
-    return [
-        <Header />,
+    return (
+      <div className="Section">
+        <Header />
         <div className="Main">
-          <h1>Home</h1>
           <button
+            className="Btn"
             data-balloon="Whats up!"
             data-balloon-pos="up"
             onClick={() => this.setState({ showModal: true })}
           >
             Do a modal
           </button>
+          <div style={{ 'padding-top': '10px' }}>
+            <button className="Btn">
+              <Link className="Btn" to="/protected">
+                Protected Route
+              </Link>
+            </button>
+          </div>
 
           {showModal && (
             <Modal handleClose={() => this.setState({ showModal: false })}>
@@ -35,7 +44,8 @@ class Home extends Component {
             </Modal>
           )}
         </div>
-      ]
+      </div>
+    )
   }
 }
 

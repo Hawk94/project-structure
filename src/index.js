@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
-import Root from './components/root'
+import Root from './components/Root'
 import { configureStore } from './configs/stores'
 
 import './index.css'

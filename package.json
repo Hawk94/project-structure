@@ -24,7 +24,9 @@
     "coverage": "yarn test -- --coverage",
     "lint": "./node_modules/.bin/eslint \"src/**/*.{js,jsx}\"",
     "lint-fix": "./node_modules/.bin/eslint --fix \"src/**/*.{js,jsx}\"",
-    "eslint-check": "./node_modules/.bin/eslint --print-config .eslintrc.json | ./node_modules/.bin/eslint-config-prettier-check"
+    "eslint-check": "./node_modules/.bin/eslint --print-config .eslintrc.json | ./node_modules/.bin/eslint-config-prettier-check",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
     "eslint": "^4.16.0",
